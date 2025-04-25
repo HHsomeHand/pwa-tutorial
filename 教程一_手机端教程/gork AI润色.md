@@ -1,5 +1,11 @@
 ## 如何快速开发一款App？PWA也许是你的答案
 
+> 文章的下载和备份:
+>
+> Gitee: https://gitee.com/HHandHsome/pwa-tutorial
+>
+> GitHub: https://github.com/HHsomeHand/pwa-tutorial
+
 ## PWA 是什么? 
 
 PWA 的主要功能就两个，一个是支持软件离线访问，另外一个是支持软件安装到主屏幕。
@@ -714,7 +720,7 @@ TABBAR 底部标签栏
 
 要将你的PWA应用打包为Android的APK文件，以便直接安装到手机，你可以使用 PWABuilder（https://www.pwabuilder.com/），一个简单高效的在线工具。以下是详细步骤：
 
-+ 点击 **Start** 按钮
++ 输入项目的 GitHub Pages 地址, 并点击 **Start** 按钮
 
 <img src="./img/gork%20AI%E6%B6%A6%E8%89%B2/19.jpg" alt="image-20250422175611434" style="zoom: 50%;" />
 
