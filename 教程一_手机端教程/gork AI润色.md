@@ -1,4 +1,123 @@
-## 如何快速开发一款App？PWA是你的答案
+## 如何快速开发一款App？PWA也许是你的答案
+
+## PWA 是什么? 
+
+PWA 的主要功能就两个，一个是支持软件离线访问，另外一个是支持软件安装到主屏幕。
+
+安装到主屏幕和创建快捷方式不一样，安装到主屏幕后，打开PWA APP，软件不会显示浏览器的地址栏，用户体验更好。
+
+PWA 的这两个特性，使其成为了 H5 开发离线 APP 的利器。
+
+但 PWA 不是银弹，PWA 最大的问题就是适配不行。
+
+目前手机端只有在 Chrome  运行 PWA APP，体验最好。
+
+Edge 和 Firefox 运行 PWA APP，有诸多问题。
+
+PWA 另外一个问题是，受限于浏览器沙盒，无法访问操作系统 API，如在桌面端，无法和原生 APP 一样，去操作其他软件的应用窗口。
+
+electron 就是为了解决 H5 无法访问操作系统 API 而诞生的，所以 PWA 暂时无法完全取代 electron。
+
+PWA 另外一个问题就是消息通知不方便。PWA APP 想给用户发消息，必须要一个后端服务器支持。
+
+## 困境
+
+而且国内 PWA 不利于软件的传播。
+
+国内没有使用 PWA 的环境，大家都是在用微信小程序。
+
+而且国内互联网起步晚，大家没有使用浏览器的习惯。
+
+直接传一个链接过去，容易引发误会，对面会以为是诈骗链接，点击了手机就中病毒了。
+
+而且国内的 PWA 应用部署也是个问题，国外有免费的 GitHub Pages，方便开发人员部署静态页面。
+
+但国内访问 GitHub Pages 非常不稳定，我也是使用梯子进行访问和更新，更新后就可以离线使用可。
+
+还可以引入 GitHub Workflow，GitHub Actions，自动 CI CD，自动打包，自动部署。
+
+但国内的 Gitee Page已经停止服务了，悲已！
+
+不知道各位有什么其他推荐的替代品，欢迎评论区分享！
+
+我主要还是自己在用，自给自足，自己开发小工具，还是很方便的。
+
+写给别人用，要考虑太多了，还要写软件说明书，还要宣传和运营。
+
+而且在 52破解 宣传的时候，还会被当广告删帖。完全免费且开源的软件，我能赚到什么？
+
+我又不是相关的行业从业人员，纯属兴趣爱好，兴趣使然，也不想运营什么个人IP。
+
+软件改了又改，就为了过审，删除了所有的联系方式：QQ、邮箱、小红书。
+
+最后竟然因为 Gitee 主页出现 QQ 号，导致被删帖，52pojie 实在是够混蛋的。
+
+管理员竟然还训我：“最后一次警告”，姨娘的，梦回学生时代，变成了被老师训话的小朋友。
+
+苦苦苦！
+
+> 运营个人 IP 需要一个统一的名字, 我各个论坛的 ID 都不一样, 不可能去运营的。
+>
+> 脚本猫 是 [溯水流光](https://bbs.tampermonkey.net.cn/home.php?mod=space&uid=135494&do=profile&from=space)
+>
+> CSDN 是 [RedDragon_Will](https://blog.csdn.net/RedDragon_Will?spm=1000.2115.3001.5343)
+>
+> 52pojie 是 [1024 jessica](https://www.52pojie.cn/home.php?mod=space&uid=1991226)
+>
+> QQ 是 宫仅 2402398917
+>
+> 完全都是随便取的, 我压根也没想过去运营和赚钱。
+
+## 我写的 PWA 软件
+
+脚本猫介绍帖子: https://bbs.tampermonkey.net.cn/thread-8512-1-1.html
+
+> ## 省流:
+>
+> 软件功能: 快速记录服药信息，避免漏服或重复服药，同时支持多种生活场景的日志记录。
+>
+> 
+>
+> ## 下载:
+>
+> 如果无法通过浏览器安装, 可以尝试下载 APK:
+> 蓝奏云: https://wwvs.lanzoue.com/iy3Gz2uach6d
+> 密码: corn
+>
+> 
+>
+> ### 说明书: 
+>
+> https://gitee.com/HHandHsome/pwa-corn-log
+> 或:
+> https://gitee.com/HHandHsome/pwa-corn-log/blob/main/doc/%E4%BD%BF%E7%94%A8%E6%89%8B%E5%86%8C/%E4%BD%BF%E7%94%A8%E6%89%8B%E5%86%8C.md
+>
+> 
+>
+> ### 软件完全开源且免费
+>
+> GitHub地址：
+> https://github.com/HHsomeHand/pwa-corn-log
+>
+> Gitee: https://gitee.com/HHandHsome/pwa-corn-log
+>
+> 
+>
+> ### 预告
+> 预告: 我不仅仅写了一个软件, 还写了两篇教程, 分别是桌面端应用开发和手机端应用开发.
+>
+>
+> ### 联系
+> 如果在软件的安装或是日常使用中，遇到任何问题，都欢迎联系我！我的 QQ 为 `2402398917`。
+>
+> 若调出满意的界面，也欢迎加 QQ 分享！
+>
+> 交流群 玉米日志软件交流俱乐部：`1038206078`
+> 加群暗号：`123456`
+
+可以体验下案例，再考虑是否学习 PWA，时间也是金钱，时间也是投资。
+
+## 前言
 
 想快速开发一款可以在手机或电脑上运行的App，但不想深陷原生开发的复杂性或小程序的限制？**PWA（Progressive Web App，渐进式网页应用）**可能正是你需要的解决方案！本文将通过Vue3、Vant、Tailwind CSS v4和PWA技术，带你一步步打造一个支持离线使用、可添加到桌面的轻量级App。本教程面向有一定Vue3和Git基础的开发者，同时为新手提供学习资源，力求通俗易懂且实用。
 
@@ -17,12 +136,23 @@
 - **Git**：了解Git的基本操作（如`git add`、`git commit`、`git push`），用于代码版本管理。推荐书籍《跟Wakaba酱一起学Git使用》（https://book.douban.com/subject/35274988/），或B站尚硅谷的Git教程，1-2小时可上手。
 - **前端基础**：掌握HTML、CSS、JavaScript，尤其是CSS的flex布局。
 
-> Git就像单机游戏的存档功能，可以随时保存你的代码进度。每当你完成一段功能或准备进行重大修改时，可以通过git commit创建一个“存档点”（提交），例如标记为“WIP”（Work In Progress，工作中）以记录当前状态。这样，无论是代码出错还是需要回退到之前的版本，Git都能帮助你快速回溯，保护开发成果。
+> Git就像单机游戏的存档功能，可以随时保存你的代码进度。
+>
+> 每当你完成一段功能或准备进行重大修改时，可以通过git commit创建一个“存档点”（提交），例如标记为“WIP”（Work In Progress，工作中）以记录当前状态。
+>
+> 这样，无论是代码出错还是需要回退到之前的版本，Git都能帮助你快速回溯，保护开发成果。
 
-#### 2. 推荐资源
-- **Git**：B站尚硅谷Git教程，或《跟Wakaba酱一起学Git使用》（孔夫子旧书网二手书9.9元包邮，淘宝多为中间商，价格偏高）。
-- **PWA**：B站黑马程序员PWA教程（https://www.bilibili.com/video/BV1wt411E7QD），讲解清晰；或《PWA入门与实践》（孔夫子旧书网购，9.9元包邮）。
+#### 2. 推荐学习资源
+- **Git**：B站尚硅谷Git教程，或《跟Wakaba酱一起学Git使用》。
+- **PWA**：
+  - 视频教程: B站黑马程序员PWA教程（https://www.bilibili.com/video/BV1wt411E7QD），讲解清晰；
+  - 书籍: 《PWA入门与实践》[王乐平](https://book.douban.com/search/王乐平)老师的（孔夫子旧书网二手书9.9元包邮，淘宝多为中间商，价格偏高）。
+
 - **Tailwind CSS**：菜鸟教程（https://www.runoob.com/tailwindcss/tailwindcss-tutorial.html），简洁直观。若CSS转Tailwind不熟悉，可询问AI（如豆包）快速查询对应写法。
+
+> PWA 教程, 优先推荐观看视频教程, 然后再学习书籍, 书籍有详细讲 indexDB, 大概提及了 workbox。
+>
+> 书籍我全看完了, 阅读体验还是很流畅的。
 
 #### 3. 开发环境
 - **Node.js**：安装最新版，包含npm。
@@ -32,6 +162,15 @@
   ```
 - **编辑器**：推荐VSCode（Tailwind插件由官方维护）或WebStorm（非商业免费，但Tailwind插件体验稍差）。
 - **浏览器**：手机端仅Chrome对PWA支持正常，Edge的navbar会与系统状态栏重合，tabbar会与底部导航键冲突，Firefox输入适配不佳。
+
+> 下面项目 CSS 的 ACSS 层，我用的是 Tailwind。
+>
+> 而且没有使用 SCSS 和 LESS。
+>
+> 因为我见过的绝大部分项目，都是用 SCSS 的循环和逻辑实现 ACSS。
+>
+> 而且原生的 CSS 也支持嵌套了，实在考虑浏览器兼容性问题，还可以使用 PostCSS 插件进行降级。
+>
 
 ---
 
@@ -593,7 +732,7 @@ PWA基于H5，继承了H5的跨平台优势，但也面临多端适配问题：
 ---
 
 ### 五、结语
-本文详细介绍了如何使用Vue3、Vant、Tailwind CSS v4和PWA技术开发一款支持离线运行、可添加到桌面的手机App。下一篇文章将聚焦桌面端PWA开发，并深入讲解GitHub Actions和APK打包，敬请期待！
+本文详细介绍了如何使用Vue3、Vant、Tailwind CSS v4和PWA技术开发一款支持离线运行、可添加到主屏幕的手机App。下一篇文章将聚焦桌面端PWA开发，并深入讲解GitHub Actions，敬请期待！
 
 欢迎在评论区分享你的开发经验或问题，感谢阅读！
 
