@@ -152,7 +152,9 @@ PWA 另外一个问题就是消息通知不方便。PWA APP 想给用户发消�
 
 > PWA 教程, 优先推荐观看视频教程, 然后再学习书籍, 书籍有详细讲 indexDB, 大概提及了 workbox。
 >
-> 书籍我全看完了, 阅读体验还是很流畅的。
+> 书籍我全看完了, 阅读体验还是很流畅的。写得挺不错的。三天就可以看完。
+>
+> 推荐看完上面教程, 再继续观看本教程。
 
 #### 3. 开发环境
 - **Node.js**：安装最新版，包含npm。
@@ -259,9 +261,13 @@ PWA通过Service Worker实现离线缓存，我们使用`vite-plugin-pwa`（基�
 ##### 什么是Service Worker？
 Service Worker是基于Web Worker的独立线程，可拦截非Ajax网络请求（如HTML、CSS、JS、图片），并缓存到浏览器，实现离线访问。Workbox是对Service Worker的封装，50%以上的网站使用它（官网数据）。
 
->在浏览器环境中，JavaScript 是单线程运行的，但可以借助 Web Worker 启动新线程执行任务。Service Worker 基于 Web Worker，会单独开启一个线程。
+>在浏览器环境中，JavaScript 是单线程运行的，但可以借助 Web Worker 启动新线程执行任务。
 >
->Service Worker 能够拦截除 Ajax 之外的所有网络请求，包括 HTML、CSS、JS 文件以及图片资源。在 Service Worker 中编写逻辑，可将这些资源缓存到浏览器，实现下次用户断网时，直接从缓存读取数据，从而达成 Web App 的离线访问。
+>Service Worker 是基于 Web Worker 的，它会单独开启一个线程。
+>
+>Service Worker 能够拦截除非传统 Ajax 之外的所有网络请求，包括 HTML、CSS、JS 文件以及图片资源。
+>
+>在 Service Worker 中编写逻辑，可将这些资源缓存到浏览器，实现下次用户断网时，直接从缓存读取数据，从而达成 Web App 的离线访问。
 >
 >框架本质是对底层的封装，例如 Vue 封装了底层 DOM 操作，Workbox 则封装了底层 Service Worker 功能。
 >
@@ -309,12 +315,12 @@ Service Worker是基于Web Worker的独立线程，可拦截非Ajax网络请求�
    ```
    **配置说明**：
    - `registerType: 'autoUpdate'`：服务器资源更新时，Service Worker自动接管页面。
-   - `globPatterns`：缓存指定类型的文件，包括图片和字体，确保离线正常显示。
+   - `globPatterns`：缓存指定类型的文件，包括图片和字体，确保离线正常显示。这里的配置适合编写完全离线的 APP。保存字体文件是为了避免字体图标显示不正常。
    - `devOptions: { enabled: false }`：避免开发模式下Workbox与热更新冲突。
    - `server.host: '0.0.0.0'`：允许手机通过IP访问开发服务器。
 
-#### 4. 引入Vant组件库
-Vant是轻量级移动端组件库，相比Vueitfy（中型）或Quasar（重型框架，含布局方案和工具库），更适合快速开发。
+#### 4. 引入Vant组件库+
+Vant是轻量级移动端组件库，相比Vueitfy（中型）或Quasar（重型框架，含布局方案和工具库），上手方便，更适合快速开发。
 
 跟着官网配置就好了,  这里的重点就是要配置自动导入
 
@@ -458,7 +464,12 @@ Tailwind CSS是一个原子化CSS框架，适合快速构建界面。
 - **dev分支**：日常开发，随手提交。
 创建和切换分支：
 ```bash
+# 创建分支
 git branch dev
+
+# 切换分支
+git checkout dev
+# 或
 git switch dev
 ```
 查看分支：
@@ -562,7 +573,7 @@ TABBAR 底部标签栏
    
    这里 view 还需要设置overflow-hidden, 避免其因为没有设置height ,导致被子元素撑开
    
-   这里确定了 view 的高度
+   这样便确定了 view 的高度
    
    然后view 再设置 flex
    
@@ -570,7 +581,7 @@ TABBAR 底部标签栏
    
    nav shrink 0 保证占位符不被压缩
    
-   main 再分割剩下的高度 再通过设置 overflow-y-hidden 其实这里就可以确定出main的高度了, 
+   main 再分割剩下的高度 再通过设置 overflow-y-hidden 其实这里便可以确定出main的高度了, 
    
    mian 高度 = 100vh - nav 高度 - tabbar 高度
    ```
@@ -593,6 +604,8 @@ TABBAR 底部标签栏
    ```
    地址栏显示`/#/`表示成功：
    <img src="./img/gork%20AI%E6%B6%A6%E8%89%B2/5.jpg" alt="image-20250422123157730" style="zoom: 50%;" />
+   
+   这里使用 Hash 路由, 是为了方便部署, 使用 Hash 路由, 部署在 Nginx 上, 基本上是 0 配置。
 
 #### 8. 手机测试
 1. 运行`pnpm dev`，输入`u`获取网络地址（如`http://192.168.0.106:5173`）：
@@ -601,7 +614,7 @@ TABBAR 底部标签栏
    ➜  Local:   http://localhost:5173/
    ➜  Network: http://192.168.0.106:5173/
    ```
-2. 手机与电脑在同一Wi-Fi下，Chrome访问该地址。仅Chrome显示正常，Edge的navbar与状态栏重合，tabbar与底部导航键冲突。
+2. 手机与电脑在同一Wi-Fi下，Chrome访问该地址。
 
 #### 9. 配置PWA图标
 1. 使用在线工具（https://favicon.inbrowser.app/tools/favicon-generator）生成图标：
@@ -633,7 +646,10 @@ TABBAR 底部标签栏
    </html>
    ```
    成功效果：
+   
    ![image-20250422123258121](./img/gork%20AI%E6%B6%A6%E8%89%B2/9.jpg)
+   
+   配置了 图标 和 Mainifest, 便可以让用户下载 PWA 到主屏幕或桌面了。
 
 #### 10. PWA调试
 1. 构建项目：
@@ -654,15 +670,15 @@ TABBAR 底部标签栏
    ![](./img/gork%20AI%E6%B6%A6%E8%89%B2/11.jpg)
    <img src="./img/gork%20AI%E6%B6%A6%E8%89%B2/12.jpg" alt="b7242b11a0744df57eee843b713d2c6" style="zoom:33%;" />
    <img src="./img/gork%20AI%E6%B6%A6%E8%89%B2/13.jpg" alt="fc4ee6705e2acbc090fbd8989c1eaa6" style="zoom:33%;" />
-5. Chrome下载PWA需梯子（因依赖Google Play服务）。若无法添加桌面，可尝试Edge，但Edge显示不正常。
+5. Chrome下载PWA需梯子（因依赖Google Play服务）。若无法添加桌面，可尝试Edge，但Edge安装后, 显示不正常。
 
 #### 11. 部署到GitHub Pages
 1. 创建GitHub仓库（如`pwa-mobile-demo`）。
-2. 添加远程仓库：
+2. 添加远程仓库, 记得这里先不要 git push：
    ```bash
    git remote add origin https://github.com/your-username/pwa-mobile-demo.git
    ```
-3. 安装`gh-pages`：
+3. 安装`gh-pages`, 这个工具可以帮助我们生成 gh-pages 分支：
    ```bash
    pnpm add -D gh-pages
    ```
